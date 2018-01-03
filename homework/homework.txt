@@ -1,4 +1,5 @@
-Learnyounode
-npm
-讀檔案 
-做筆記
+1/3
+1."Learnyounode" to at least practice 10
+2.try to start with "how-to-npm"
+3.Read and execute this repository https://github.com/NTU-ArtFest22/Monitor-web 
+4.upload Learnyounode practices to github
