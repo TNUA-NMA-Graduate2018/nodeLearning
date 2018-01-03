@@ -1,0 +1,4 @@
+Learnyounode
+npm
+讀檔案 
+做筆記
