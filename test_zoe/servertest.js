@@ -1,15 +1,11 @@
 var net = require('net')
-var HOST = '192.168.43.110';
+var HOST = '35.194.227.31';
 var PORT = 8877; // 定義 Port
 //建立 net.createServer() 的物件
 
 const fs = require('fs');
 
-
-
 var server = net.createServer(function (socket) {
-
-
 
   // data event： 到收到資料傳輸時觸發事件 ， argument 為對象傳輸的物件
   socket.on('data', function (data) {
