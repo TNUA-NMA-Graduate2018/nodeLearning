@@ -1,5 +1,5 @@
 var net = require('net')
-var HOST = '35.194.227.31';
+var HOST = '127.0.0.1';
 var PORT = 8877; // 定義 Port
 //建立 net.createServer() 的物件
 
