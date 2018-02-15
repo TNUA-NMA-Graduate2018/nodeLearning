@@ -21,7 +21,7 @@ server.on('clientConnected', function(client) {
 // fired when a message is received
 server.on('published', function(packet, client) {
 //	packet.setEncoding('utf8');
-  console.log('Published : ', packet.payload);
+  console.log('Published : ',  (packet.payload).toString());
 });
 
 // fired when a client subscribes to a topic
