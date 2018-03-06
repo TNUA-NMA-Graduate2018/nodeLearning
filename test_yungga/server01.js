@@ -88,7 +88,7 @@ clients.length = function(){
 
 //开启聊天服务器~~
 server.listen(({
-  host: 'localhost',
+  host: '35.194.227.31',
   port:30001,
   exclusive: true
 }));
