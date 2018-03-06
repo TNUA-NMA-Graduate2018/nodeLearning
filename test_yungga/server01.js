@@ -20,7 +20,7 @@ var server = net.createServer((socket) => {
         clients.sendAll(socket, ' online: ' + clients.length());
 
     });
-    console.log('有人连了,客户端数量:'+ clients.length() );
+    console.log('online:'+ clients.length() );
 
 
     socket.write(time +' welcome' + name + '!\n' );
@@ -68,8 +68,8 @@ clients.sendAll = function(socket,data){
             var o = this.list[i];
             //检查socket是否可以写
             if (o.writable) {
-                console.log('发送给:' + o.name);
-                o.write('-----\n' + getTime() + '\n' + socket.name + '说:\n');
+                console.log( o.name);
+                o.write('-----\n' + '\n' + socket.name + '说:\n');
                 o.write(data);
                 o.write('-----');
             } else {
