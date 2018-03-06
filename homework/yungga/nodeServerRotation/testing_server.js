@@ -9,6 +9,7 @@ net.createServer(function (socket) {
   clients.push(socket);
 
   socket.write("Welcome " + socket.name + "\n");
+  disconnected=0;
   broadcast(socket.name + " joined the chat\n", socket);
 
   socket.on('data', function (data) {
@@ -16,7 +17,7 @@ net.createServer(function (socket) {
     if(data!='\n'){
     rotation=data;
     broadcast(rotation,socket);
-    disconnected=0;
+
 }
   });
 
@@ -37,7 +38,7 @@ net.createServer(function (socket) {
     process.stdout.write(message);
   }
 
-}).listen(10004);
+}).listen(30001);
 
 
 // Put a friendly message on the terminal of the server.

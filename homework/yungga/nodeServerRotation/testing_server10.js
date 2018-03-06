@@ -9,6 +9,7 @@ net.createServer(function (socket) {
   clients.push(socket);
 
   socket.write("Welcome " + socket.name + "\n");
+  disconnected=0;
   broadcast(socket.name + " joined the chat\n", socket);
 
   socket.on('data', function (data) {
@@ -16,7 +17,7 @@ net.createServer(function (socket) {
     if(data!='\n'){
     rotation=data;
     broadcast(rotation,socket);
-    disconnected=0;
+
 }
   });
 
@@ -41,4 +42,4 @@ net.createServer(function (socket) {
 
 
 // Put a friendly message on the terminal of the server.
-console.log("Chat server running at port 10004\n");
+console.log("Chat server running at port 30010\n");
