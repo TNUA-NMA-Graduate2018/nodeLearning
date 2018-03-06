@@ -23,7 +23,7 @@ var server = net.createServer((socket) => {
     console.log('online:'+ clients.length() );
 
 
-    socket.write(time +' welcome' + name + '!\n' );
+    socket.write(' welcome' + name + '!\n' );
     clients.sendAll(socket, 'online: ' + clients.length());
 }).on('error', (err) => {
   // handle errors here
@@ -69,7 +69,7 @@ clients.sendAll = function(socket,data){
             //检查socket是否可以写
             if (o.writable) {
                 console.log( o.name);
-                o.write('-----\n' + '\n' + socket.name + '说:\n');
+                o.write('-----\n' + '\n' + socket.name + ':\n');
                 o.write(data);
                 o.write('-----');
             } else {
@@ -88,7 +88,7 @@ clients.length = function(){
 
 //开启聊天服务器~~
 server.listen(({
-
+  host: 'localhost',
   port:30001,
   exclusive: true
 }));
