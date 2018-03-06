@@ -16,6 +16,7 @@ net.createServer(function (socket) {
     if(data!='\n'){
     rotation=data;
     broadcast(rotation,socket);
+    disconnected=0;
 }
   });
 

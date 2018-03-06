@@ -16,7 +16,6 @@ net.createServer(function (socket) {
     if(data!='\n'){
     rotation=data;
     broadcast(rotation,socket);
-    disconnected=0;
 }
   });
 
@@ -37,7 +36,7 @@ net.createServer(function (socket) {
     process.stdout.write(message);
   }
 
-}).listen(30009);
+}).listen(10004);
 
 
 // Put a friendly message on the terminal of the server.
