@@ -7,7 +7,7 @@ var server = net.createServer((socket) => {
     //接收客户发过来的信息
     socket.on('data', function(data) {
         console.log(data);
-        if data='\n'; return;
+        if (data==='\n') return;
         //发送给所有人
         clients.sendAll(socket,data);
     });
