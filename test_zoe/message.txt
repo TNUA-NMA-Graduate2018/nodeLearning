@@ -1,0 +1,10 @@
+GET / HTTP/1.1
+Host: 35.194.227.31:8899
+User-Agent: curl/7.51.0
+Accept: */*
+
+GET / HTTP/1.1
+Host: 35.194.227.31:8899
+User-Agent: curl/7.51.0
+Accept: */*
+
